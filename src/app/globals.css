@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply font-semibold text-[40px] leading-[110%] tracking-normal uppercase;
+	}
+
+	h2 {
+		@apply font-semibold text-[24px] leading-[110%] tracking-normal uppercase;
+	}
+
+	h3 {
+		@apply font-semibold text-[20px] leading-[110%] tracking-normal uppercase;
+	}
+
+	h4 {
+		@apply font-semibold text-[16px] leading-[110%] tracking-normal uppercase;
+	}
+}
+
+:root {
+	--background: #0f0f17;
+	--foreground: #ffffff;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-inter), sans-serif;
+}
