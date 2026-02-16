@@ -21,9 +21,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<body className={`${inter.variable} flex min-h-screen flex-col`}>
+			<body className={`${inter.variable} flex flex-col min-h-screen`}>
 				<Header />
-				<main className='flex-1'>{children}</main>
+				<main className='flex-1 flex flex-col'>{children}</main>
 			</body>
 		</html>
 	)
