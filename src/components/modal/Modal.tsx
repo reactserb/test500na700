@@ -22,6 +22,16 @@ export default function Modal({ onClose }: { onClose: () => void }) {
 	const [agree, setAgree] = useState(false)
 	const [errors, setErrors] = useState<FormErrors>({})
 
+	useEffect(() => {
+		document.body.classList.add('modal-open')
+		document.body.style.overflow = 'hidden'
+
+		return () => {
+			document.body.classList.remove('modal-open')
+			document.body.style.overflow = ''
+		}
+	}, [])
+
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { id, value } = e.target
 
