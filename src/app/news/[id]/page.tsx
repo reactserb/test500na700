@@ -9,9 +9,7 @@ export default async function NewsPage({
 }) {
 	const { id } = await params
 
-	const baseUrl = typeof window === 'undefined' ? 'http://localhost:3000' : ''
-
-	const res = await fetch(`${baseUrl}/news.json`, {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/news.json`, {
 		next: { revalidate: 3600 },
 	})
 	const allNews: News[] = await res.json()

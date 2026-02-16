@@ -2,9 +2,7 @@ import { News } from '@/types/news'
 import NewsItem from './NewsItem'
 
 const NewsBlock = async () => {
-	const baseUrl = typeof window === 'undefined' ? 'http://localhost:3000' : ''
-
-	const res = await fetch(`${baseUrl}/news.json`, {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/news.json`, {
 		cache: 'no-store',
 	})
 	const news: News[] = await res.json()
