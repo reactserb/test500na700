@@ -24,7 +24,7 @@ export default async function NewsPage({
 
 	return (
 		<article className='flex flex-col xl:flex-row xl:mt-[18px] sm:ml-5 xl:ml-10 xl:gap-x-5'>
-			<div className='relative w-[320px] h-[232px] sm:w-[500px] sm:h-[332px] xl:h-[320px] xl:w-[440px] mb-8'>
+			<div className='relative w-full h-[232px] sm:w-[500px] sm:h-[332px] xl:h-[320px] xl:w-[440px] mb-8'>
 				<Image
 					src={img}
 					alt={title}
